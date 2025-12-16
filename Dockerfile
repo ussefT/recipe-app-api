@@ -7,8 +7,8 @@ ENV PYTHONUNBUFFERED 1
 # see log python immetediately on screen
 
 
-COPY ./requirements.txt  /tmp/requirements.txt
-COPY ./requirements.dev.txt  /tmp/requirements.dev.txt
+COPY   requirements.txt  /tmp/requirements.txt
+COPY   requirements.dev.txt  /tmp/requirements.dev.txt
 
 COPY ./app /app
 # ./app in my local  /app in container
