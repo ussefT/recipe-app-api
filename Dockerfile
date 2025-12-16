@@ -19,13 +19,14 @@ EXPOSE 8000
 # Port 8000 for this app on container
 
 ARG DEV=false
+ENV DEV=${DEV}
 RUN python -m venv /py && \
     # Create virtualenvirnment 
     /py/bin/pip install --upgrade pip && \
     # Update pip 
     /py/bin/pip install -r /tmp/requirements.txt && \
-    if[ $DEV = "true" ]; \
-        then /py/bin/pip install -r /tmp/requirements.dev.txt ; \
+    if [ "$DEV" = "true" ]; then \
+         /py/bin/pip install -r /tmp/requirements.dev.txt ; \
     fi && \
     # Install requiremnts
     rm -rf /tmp && \

@@ -222,3 +222,5 @@ app/app/*.pyc
 ./app/app/app/__pycache__
 .venv
 ./app/.venv
+./app/*.pyc
+./app/app/*.pyc
