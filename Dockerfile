@@ -8,7 +8,7 @@ ENV PYTHONUNBUFFERED 1
 
 
 COPY ./requirements.txt  /tmp/requirements.txt
-COPY ./requirements.dev.txt /tmp/requirements.dev.txt
+COPY ./requirements.dev.txt  /tmp/requirements.dev.txt
 
 COPY ./app /app
 # ./app in my local  /app in container
@@ -25,9 +25,9 @@ RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
     # Update pip 
     /py/bin/pip install -r /tmp/requirements.txt && \
-    if [ "$DEV" = "true" ]; then \
-         /py/bin/pip install -r /tmp/requirements.dev.txt ; \
-    fi && \
+    #if [ "$DEV" = "true" ]; then \
+    #     /py/bin/pip install -r /tmp/requirements.dev.txt ; \
+    #fi && \
     # Install requiremnts
     rm -rf /tmp && \
     # Remove requirement in tmp
