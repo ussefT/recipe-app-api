@@ -1,4 +1,4 @@
-FROM python:3.9-alphine3.13
+FROM python:3.12-alpine
 # Use alphine is lite of linux
 
 LABEL maintainer="usef.com"
