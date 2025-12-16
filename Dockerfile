@@ -25,7 +25,7 @@ RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
     # Update pip 
     /py/bin/pip install -r /tmp/requirements.txt && \
-    chmod -R a+rX /py/lib/python3.12/site-packages && \
+    chmod -R a+rX /py && \
     #if [ "$DEV" = "true" ]; then \
     #     /py/bin/pip install -r /tmp/requirements.dev.txt ; \
     #fi && \
