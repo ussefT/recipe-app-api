@@ -216,6 +216,16 @@ app/.venv
 app/*.pyc
 app/app/*.pyc
 
+app/core/test/__pycache__
+app/core/migrations/__pycache__
+app/core/management/__pycache__
+app/core/management/commands/__pycache__
+app/core/__pycache__/*
+app/core/test/__pycache__/*
+app/core/migrations/__pycache__/*
+app/core/management/__pycache__/*
+app/core/management/commands/__pycache__/*
+
 ./app/db.*
 ./app/app/__pycache__
 ./app/__pycache__
@@ -224,3 +234,13 @@ app/app/*.pyc
 ./app/.venv
 ./app/*.pyc
 ./app/app/*.pyc
+./app/core/__pycache__
+./app/core/test/__pycache__
+./app/core/migrations/__pycache__
+./app/core/management/__pycache__
+./app/core/management/commands/__pycache__
+./app/core/__pycache__/*
+./app/core/test/__pycache__/*
+./app/core/migrations/__pycache__/*
+./app/core/management/__pycache__/*
+./app/core/management/commands/__pycache__/*
