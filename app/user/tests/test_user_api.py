@@ -5,7 +5,7 @@ from django.test import TestCase
 from django.contrib.auth import get_user_model
 from django.urls import reverse
 
-from rest_framework.test import RequestsClient
+from rest_framework.test import APIClient
 from rest_framework import status
 
 
@@ -21,7 +21,7 @@ class PublicUserTests(TestCase):
     """Test the public features of the user API."""
 
     def setUp(self):
-        self.client=RequestsClient()
+        self.client=APIClient()
 
     def test_create_user_success(self):
         """Test createing a user is successful"""
@@ -140,8 +140,8 @@ class PrivateUserApiTests(TestCase):
             name="Test Name",
         )
 
-        self.client = RequestsClient()
-        self.client.force_authentication(user=self.user)
+        self.client = APIClient()
+        self.client.force_authenticate(user=self.user)
 
     def test_retrieve_profile_success(self):
         """Test retrieving profile for logged in user."""
