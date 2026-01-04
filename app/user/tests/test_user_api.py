@@ -149,7 +149,6 @@ class PrivateUserApiTests(TestCase):
         # request get to url
         res = self.client.get(ME_URL)
 
-
         self.assertEqual(res.status_code,status.HTTP_200_OK)
 
         self.assertEqual(res.data,
